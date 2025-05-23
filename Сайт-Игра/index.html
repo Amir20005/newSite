@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moscow Poly Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo" id="siteLogo">Moscow Polytech</div>
+    <button class="lang-switch" onclick="toggleLanguage()">EN | RU</button>
+  </header>
+
+  <!-- Welcome Screen -->
+  <div class="welcome-screen" id="welcome">
+    <h1 id="welcomeTitle">Welcome to Moscow Polytechnic</h1>
+    <p id="welcomeText">Your journey starts here. Discover iconic places of our campus.</p>
+    <button id="startButton" onclick="startGame()">Start</button>   
+  </div>
+
+  <!-- Game -->
+  <div class="game-card" id="game" style="display: none;">
+    <h1 id="gameTitle">Guess the Place</h1>
+    <div class="question-status">
+      <span id="questionNumber">1</span> of <span id="questionTotal">?</span>
+    </div>
+    <div class="progress-bar-container">
+      <div id="progressBar"></div>
+    </div>
+    <img id="locationImage" src="img/0.jpg" alt="Place">
+    <div class="options" id="options"></div>
+    <div id="feedback"></div>
+    <button id="nextButton" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 id="aboutTitle">About Moscow Polytechnic</h2>
+   <p id="aboutText">
+    Moscow Polytechnic University is one of the leading engineering and technical universities in Russia. 
+    With modern infrastructure, international programs, and innovative projects, it is a great place for students from all over the world.
+  </p>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+   <p id="footerText">&copy; 2025 Moscow Polytechnic · <a href="https://mospolytech.ru/en/" target="_blank" id="footerLink">Visit Official Website</a></p>
+  </footer>
+
+  <script>
+    function updateTextContent() {
+      document.getElementById("welcomeTitle").textContent =
+        currentLanguage === "en"
+          ? "Welcome to Moscow Polytechnic"
+          : "Добро пожаловать в Московский Политех";
+
+      document.getElementById("welcomeText").textContent =
+        currentLanguage === "en"
+          ? "Your journey starts here. Discover iconic places of our campus."
+          : "Ваше путешествие начинается здесь. Узнайте знаковые места нашего кампуса.";
+
+      document.getElementById("startButton").textContent =
+        currentLanguage === "en" ? "Start" : "Начать";
+
+      document.getElementById("gameTitle").textContent =
+        currentLanguage === "en" ? "Guess the Place" : "Угадай место";
+
+      document.getElementById("aboutTitle").textContent =
+        currentLanguage === "en"
+          ? "About Moscow Polytechnic"
+          : "О Московском Политехе";
+
+      document.getElementById("aboutText").textContent =
+        currentLanguage === "en"
+          ? "Moscow Polytechnic University is one of the leading engineering and technical universities in Russia. With modern infrastructure, international programs, and innovative projects, it is a great place for students from all over the world."
+          : "Московский Политех — один из ведущих инженерно-технических вузов России. С современной инфраструктурой, международными программами и инновационными проектами — отличное место для студентов со всего мира.";
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

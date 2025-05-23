@@ -1,0 +1,365 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px black;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.options button {
+  background-color: #ffffff10;
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 400px;
+}
+
+.options button:hover {
+  background-color: #ffffff30;
+  transform: scale(1.03);
+}
+
+#feedback {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  min-height: 24px;
+}
+
+#feedback.correct {
+  color: #00ff80;
+}
+
+#feedback.wrong {
+  color: #ff5050;
+}
+
+#nextButton {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#nextButton:hover {
+  background-color: #019875;
+}
+
+.game-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  max-width: 1000px;
+  margin: 40px auto;
+
+}
+
+.question-status {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.progress-bar-container {
+  background: #ffffff20;
+  border-radius: 10px;
+  height: 10px;
+  width: 80%;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+}
+
+#progressBar {
+  background: #00ff80;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+.welcome-screen {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.welcome-screen h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.welcome-screen p {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.welcome-screen button {
+  padding: 12px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #E63246;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.welcome-screen button:hover {
+  background-color: #c22034;
+}
+.site-header {
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.site-header .logo {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 24px;
+}
+.about {
+  max-width: 1000px;
+  margin: 60px auto 30px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #874BA0, #4B86E9); /* мягкий фирменный градиент */
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.about p {
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+.site-footer {
+  background-color: #000;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.site-footer a {
+  color: #E63246;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .options button {
+  background-color: #3B2C4F; /* тёмно-фиолетовый */
+  color: white;
+  border: 2px solid #ffffff40;
+  border-radius: 12px;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 400px;
+}
+}
+.options button:hover {
+  background-color: #4B3864; /* немного светлее при наведении */
+  transform: scale(1.03);
+}
+.final-screen {
+  background: linear-gradient(145deg, #874BA0, #4B86E9);
+  color: white;
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 700px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.final-screen h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.final-screen p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.final-screen button {
+  background-color: #55B432;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.final-screen button:hover {
+  background-color: #469f2e;
+}
+
+/* Мягкая анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.lang-switch {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: none;
+  border: 2px solid #fff;
+  color: white;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-switch:hover {
+  background-color: #ffffff20;
+}
+.selected-option {
+  background-color: #6c3cb5; /* или другой фиолетовый */
+  box-shadow: 0 0 10px #6c3cb5;
+  font-weight: bold;
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .options button {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  #nextButton {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  .welcome-screen p,
+  #welcomeText,
+  #aboutText,
+  #feedback {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  img#locationImage {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .result-item {
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .result-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}
+@media (max-width: 768px) {
+.result-item {
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.result-item.correct {
+  background-color: #2ecc7070;
+  border-left: 6px solid #2ecc71;
+}
+
+.result-item.wrong {
+  background-color: #e74c3c70;
+  border-left: 6px solid #e74c3c;
+}
+
+.result-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+}
